@@ -1,0 +1,23 @@
+{
+  "name": "easydi",
+  "version": "0.0.1",
+  "description": "Easy Javascript Dependency Injector",
+  "main": "lib/easydi.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssd"
+  },
+  "keywords": [
+    "Javascript",
+    "Di",
+    "Ioc",
+    "Modules"
+  ],
+  "author": "Sergii Kocherev",
+  "license": "MIT"
+}
