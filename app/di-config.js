@@ -1,19 +1,17 @@
 const DI = require('easydi/core');
+const diContainer = new DI();
 
-module.exports = new DI([
-  {'StaticService': 'app/ser-a'},
-  {
-    name: 'DynamicService',
-    path: 'app/ser-b',
-    initiator: function(Service) {
-      return new Service();
-    }
-  },
-  {
-    name: 'AsyncService',
-    path: 'app/ser-c',
-    initiator: function(Service) {
-      return Service.init();
-    }
-  },
-]);
+const StaticService = require('./ser-a');
+const DynamicService = require('./ser-b');
+
+const AsyncService = require('./ser-c');
+
+diContainer.inject('DynamicService', DynamicService);
+diContainer.provide('StaticService', function() {
+  return StaticService;
+});
+diContainer.single('AsyncService', function(container) {
+  return AsyncService.init(container.get('DynamicService'), container.get('StaticService'));
+});
+
+module.exports = diContainer;

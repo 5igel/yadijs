@@ -1,6 +1,6 @@
-class ServiceA {
+class ServiceB {
   constructor(){
-
+    console.log('Service B constructed');
   }
 
   getData() {
@@ -8,4 +8,4 @@ class ServiceA {
   };
 }
 
-module.exports = ServiceA;
+module.exports = ServiceB;

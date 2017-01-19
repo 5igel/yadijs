@@ -1,15 +1,19 @@
-const DI = require('easydi/core');
-const di = require('./di-config');
-//const serviceA = di.inject('StaticService');
-//const serviceB = di.inject('DynamicService');
+const diContainer = require('./di-config');
+
 
 class ServiceC {
-  static init(){
+  static init(serA, serB){
+    console.log('Service C inited');
     return new Promise(resolve => {
-      console.log('Init Service C');
-      resolve(ServiceC);
-    });
+      setTimeout(()=>{
+        serA.getData();
+        serB.getData();
+
+        resolve(ServiceC);
+      }, 1000)
+    })
   }
+
   static getData() {
     console.log('Hello I`m service C');
   };
