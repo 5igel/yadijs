@@ -1,4 +1,4 @@
-const diContainer = require('./di-config');
+const diContainer = require('./sample-container');
 
 
 class ServiceC {
