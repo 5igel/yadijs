@@ -52,7 +52,6 @@ class Container {
    * Searching for a dependency in the list
    * @param {string} depName
    * @return {Object|undefined}
-   * @private
    */
   get(depName) {
     const dep = this.findDependency_(depName);

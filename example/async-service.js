@@ -1,15 +1,15 @@
 const diContainer = require('./sample-container');
 
 
-class ServiceC {
+class AsyncService {
   static init(serA, serB){
-    console.log('Service C inited');
+    console.log('Async Service inited');
     return new Promise(resolve => {
       setTimeout(()=>{
         serA.getData();
         serB.getData();
 
-        resolve(ServiceC);
+        resolve(AsyncService);
       }, 1000)
     })
   }
@@ -19,4 +19,4 @@ class ServiceC {
   };
 }
 
-module.exports = ServiceC;
+module.exports = AsyncService;

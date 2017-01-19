@@ -1,4 +1,3 @@
-const DI = require('../src/container');
 const SimpleClass = require('./simple-class');
 const SingleInstanceClass = require('./single-instance-class');
 const StaticService = require('./static-service');

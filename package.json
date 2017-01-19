@@ -1,6 +1,6 @@
 {
   "name": "yadijs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Yet Another Dependency Injector",
   "main": "src/container.js",
   "scripts": {
@@ -8,13 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssd"
+    "url": "https://github.com/5igel/yadijs.git"
   },
   "keywords": [
-    "Javascript",
-    "Di",
-    "Ioc",
-    "Modules"
+    "javascript",
+    "dependency injector",
+    "inversion of control"
   ],
   "author": "Sergii Kocherev",
   "license": "MIT"
